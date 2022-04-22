@@ -142,6 +142,151 @@ character TEXT
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+INSERT INTO movies( 
+    title, 
+    year_released, 
+    rating,
+    studio, 
+    studio_id
+)
+
+VALUES (
+    "Batman Begins",
+    "2005",
+    "PG-13",
+    "Warner Bros.",
+    "1"
+); 
+
+INSERT INTO movies( 
+    title, 
+    year_released, 
+    rating,
+    studio, 
+    studio_id
+)
+
+VALUES (
+    "The Dark Knight",
+    "2008",
+    "PG-13",
+    "Warner Bros.",
+    "1"
+); 
+INSERT INTO movies( 
+    title, 
+    year_released, 
+    rating,
+    studio, 
+    studio_id
+)
+
+VALUES (
+    "The Dark Knight Rises",
+    "2012",
+    "PG-13",
+    "Warner Bros.",
+    "1"
+); 
+
+INSERT INTO studios ( 
+    name
+)
+
+VALUES (
+    "Warner Bros."
+); 
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Christian Bale"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Michael Caine"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Liam Neeson"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Katie Holmes"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Gary Oldman"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Heath Ledger"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Aaron Eckhart"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Maggie Gyllenhall"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Tom Hardy"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Joseph Gordon-Levitt"
+);
+
+INSERT INTO actors (
+    actor_name
+)
+
+VALUES (
+    "Anne Hathaway"
+);
+
+
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
