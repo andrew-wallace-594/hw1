@@ -105,7 +105,6 @@
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS studios; 
 DROP TABLE IF EXISTS actors; 
-DROP TABLE IF EXISTS casts;
 DROP TABLE IF EXISTS roles;  
 
 -- Create new tables, according to your domain model
@@ -193,6 +192,8 @@ INSERT INTO studios (
 VALUES (
     "Warner Bros."
 ); 
+
+--- actors
 
 INSERT INTO actors (
     actor_name
