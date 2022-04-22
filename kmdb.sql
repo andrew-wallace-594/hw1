@@ -105,7 +105,8 @@
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS studios; 
 DROP TABLE IF EXISTS actors; 
-DROP TABLE IF EXISTS casts; 
+DROP TABLE IF EXISTS casts;
+DROP TABLE IF EXISTS roles;  
 
 -- Create new tables, according to your domain model
 -- TODO!
@@ -115,7 +116,7 @@ id INTEGER PRIMARY KEY AUTOINCREMENT,
 title TEXT, 
 year_released TEXT, 
 rating TEXT, 
-studio TEXT, 
+studio TEXT,  
 studio_id INTEGER
 );
 
@@ -129,18 +130,19 @@ id INTEGER PRIMARY KEY AUTOINCREMENT,
 actor_name
 ); 
 
-CREATE TABLE casts (
-id INTEGER PRIMARY KEY AUTOINCREMENT, 
-movie_id INTEGER, 
-movie TEXT,
-actor_id TEXT,  
-actor TEXT, 
-character TEXT
+
+CREATE TABLE roles (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    character_name TEXT, 
+    actor_id TEXT, 
+    movie_id INTEGER
 ); 
 
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
+
+-- movie data
 
 INSERT INTO movies( 
     title, 
@@ -188,6 +190,8 @@ VALUES (
     "Warner Bros.",
     "1"
 ); 
+
+ --- actors 
 
 INSERT INTO studios ( 
     name
@@ -285,7 +289,188 @@ VALUES (
     "Anne Hathaway"
 );
 
+-- roles
 
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Bruce Wayne",
+"1", 
+"1"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Alfred",
+"2", 
+"1"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Ra's Al Ghul",
+"3", 
+"1"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Rachel Dawes",
+"4", 
+"1"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Commissioner Gordon",
+"5", 
+"1"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Bruce Wayne",
+"1", 
+"2"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Joker",
+"6", 
+"2"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Harvey Dent",
+"7", 
+"2"
+); 
+
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Alfred",
+"2", 
+"2"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Rachel Dawes",
+"8", 
+"2"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Bruce Wayne",
+"1", 
+"3"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Commissioner Gordon",
+"5", 
+"3"
+);
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Bane",
+"9", 
+"3"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"John Blake",
+"10", 
+"3"
+); 
+
+INSERT INTO roles (
+character_name, 
+    actor_id, 
+    movie_id
+)
+
+VALUES (
+"Selina Kyle",
+"11", 
+"3"
+);
 
 -- Prints a header for the movies output
 .print "Movies"
